@@ -4,7 +4,6 @@ import pygame as pg
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-
 def main():
     pg.display.set_caption("はばたけ！こうかとん")
     screen = pg.display.set_mode((800, 600))
@@ -13,8 +12,8 @@ def main():
     bg_img2 = pg.transform.flip(bg_img, True, False)  # 練習8：左右反転した背景画像Surface
     kk_img = pg.image.load("fig/3.png")  # 練習3：こうかとん画像Surfaceの作成
     kk_img = pg.transform.flip(kk_img, True, False)  # 練習3：こうかとん左右反転
-    kk_rct = kk_img.get_rect()  # 練習10-1：こうかとんRectの取得
-    kk_rct.center = 300, 200  # 練習10-2：こうかとんの初期座標を設定
+    kk_rct = kk_img.get_rect()  
+    kk_rct.center = 300, 200  
     tmr = 0
     while True:
         for event in pg.event.get():
